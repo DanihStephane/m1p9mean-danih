@@ -10,8 +10,8 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class ProduitService {
-  apiURL: string = 'http://localhost:3000/produits';
+export class RestaurantService {
+  apiURL: string = 'http://localhost:3000/restaurants';
 
   produits: Produit[];
 
@@ -25,7 +25,7 @@ export class ProduitService {
       ];*/
   }
 
-  listeProduit() {
+  listeRestaurant() {
     let head = new HttpHeaders()
       .set("Authorization", "Bearer " + localStorage.getItem('token'));
     let body = {

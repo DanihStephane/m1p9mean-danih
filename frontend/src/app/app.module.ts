@@ -10,7 +10,10 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
-import { AccueilComponent } from './accueil/accueil.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { DetailProduitComponent } from './detail-produit/detail-produit.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { CommandeComponent } from './commande/commande.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { AccueilComponent } from './accueil/accueil.component';
     UpdateProduitComponent,
     LoginComponent,
     ForbiddenComponent,
-    AccueilComponent
+    InscriptionComponent,
+    DetailProduitComponent,
+    RestaurantComponent,
+    CommandeComponent
   ],
   imports: [
     BrowserModule,

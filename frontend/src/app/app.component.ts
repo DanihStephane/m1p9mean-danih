@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { stringify } from 'querystring';
 import { AuthService } from './services/auth.service';
 
 @Component({
@@ -19,9 +20,10 @@ export class AppComponent implements OnInit {
     let loggedUser: string;
     isloggedin = localStorage.getItem('isloggedIn');
     loggedUser = localStorage.getItem('loggedUser');
+   
     console.log(isloggedin+" "+loggedUser);
     if (isloggedin != "true" || !loggedUser)
-      this.router.navigate(['/login']);
+      this.router.navigate(['/inscription']);
     else
       this.authService.setLoggedUserFromLocalStorage(loggedUser);
   }

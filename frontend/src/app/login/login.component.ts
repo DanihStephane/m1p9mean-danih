@@ -16,19 +16,18 @@ export class LoginComponent implements OnInit {
 
   user = new User();
 
-  constructor(private authService : AuthService,
-              public router: Router) { }
+  constructor(private authService: AuthService,
+    public router: Router) { }
 
   ngOnInit(): void {
   }
- 
-  async onLoggedin()
-  {
+
+  async onLoggedin() {
     await this.authService.SignIn(this.user);
-    if(!localStorage.getItem('loggedUser')){
-      this.router.navigate(['/accueil']);
-    }else{
-      Swal.fire('Non connecté','Login ou mot de passe incorrecte!','error');
+    if (!localStorage.getItem('loggedUser')) {
+      this.router.navigate(['/']);
+    } else {
+      Swal.fire('Non connecté', 'Login ou mot de passe incorrecte!', 'error');
     }
-}
+  }
 }
